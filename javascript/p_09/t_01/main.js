@@ -43,14 +43,18 @@ setIntervalIndex = setInterval(changeSlide, time);
 // Implementacja
 
 function keyChangeSlide(e) {
-  clearInterval(setIntervalIndex);
-  switch (e.keyCode) {
-    case 37:
-      active--;
-      break;
-    case 39:
-      active++;
-      break;
+  if (e.keyCode == 37 || e.keyCode == 39) {
+    clearInterval(setIntervalIndex);
+    switch (e.keyCode) {
+      case 37:
+        active--;
+        break;
+      case 39:
+        active++;
+        break;
+    }
+  } else {
+    return;
   }
 
   if (active == slideList.length) {
