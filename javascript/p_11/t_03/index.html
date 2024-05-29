@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Stopwatch</title>
+    <style>
+      body {
+        margin: 0;
+        background-color: darkblue;
+        color: white;
+      }
+      .time {
+        position: absolute;
+        width: 100vw;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        font-size: 60px;
+        text-align: center;
+        font-family: monospace;
+      }
+      button {
+        font-size: 44px;
+        margin: 30px;
+        color: white;
+        background-color: transparent;
+        border: 3px solid white;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="main">Start</button>
+    <button class="reset">Reset</button>
+    <div class="time">
+      <p>Czas do startu</p>
+      <div>---</div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
