@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Font changer</title>
+    <style>
+      @font-face {
+        font-family: "Roboto";
+        src: url("./font/Roboto-Regular.ttf");
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+        font-family: Arial;
+      }
+
+      .rangeInput {
+        width: 90%;
+      }
+
+      .sampleText {
+        font-size: 16px;
+      }
+    </style>
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <input
+      class="rangeInput"
+      type="range"
+      name=""
+      max="50"
+      min="1"
+      value="16"
+    />
+    <select class="fontSelector" name="" id="">
+      <option value="Arial">Arial</option>
+      <option value="Times New Roman">Times New Roman</option>
+      <option value="Roboto">Roboto</option>
+    </select>
+    <p class="sampleText">
+      Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum
+      sint consectetur cupidatat.
+    </p>
+  </body>
+</html>

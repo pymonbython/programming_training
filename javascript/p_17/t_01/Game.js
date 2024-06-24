@@ -28,9 +28,11 @@ class Game {
     // this.spanWallet.textContent = this.wallet.getWalletValue();
     this.spanWallet.textContent = money;
     this.spanGames.textContent = stats[0];
-    this.spanWins.textContent = stats[0];
-    this.spanLosses.textContent = stats[0];
-    result ? (result = `Wygrałeś ${wonMoney}`) : (result = `Przegrałeś ${bid}`);
+    this.spanWins.textContent = stats[1];
+    this.spanLosses.textContent = stats[2];
+    result
+      ? (result = `Wygrałeś ${wonMoney}$.`)
+      : (result = `Przegrałeś ${bid}$.`);
     if (!bid) {
       result = "";
     }
@@ -41,5 +43,34 @@ class Game {
     );
   }
 
-  startGame() {}
+  startGame() {
+    if (this.inputBid.value < 1)
+      return alert("Kwota którą chcesz grać jest za mała!");
+    const bid = Math.floor(this.inputBid.value);
+
+    if (!this.wallet.checkCanPlay(bid))
+      return alert(
+        "Masz za mało środków bądź podana została nieprawidłowa wartość"
+      );
+
+    this.wallet.changeWallet(bid, "-");
+    this.draw = new Draw();
+    const colors = this.draw.getDrawResult();
+    const win = Result.checkWinner(colors);
+    console.log(colors);
+    const wonMoney = Result.moneyWinInGame(win, bid);
+    this.wallet.changeWallet(wonMoney);
+    this.stats.addGameToStatistics(win, bid);
+
+    this.render(
+      this.wallet.getWalletValue(),
+      this.stats.showGameStatistics(),
+      win,
+      colors,
+      bid,
+      wonMoney
+    );
+
+    this.inputBid.value = "";
+  }
 }
