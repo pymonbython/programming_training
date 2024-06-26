@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Image filter</title>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+  </head>
+  <body>
+    <button class="btn-scroller">Przejdź do fajnej sekcji.</button>
+    <div class="range-bars">
+      <label for="brightness-bar"
+        >Brightness
+        <input
+          type="range"
+          name="brightness-bar"
+          class="bar"
+          min="0"
+          max="200"
+          value="100"
+      /></label>
+      <label for="contrast-bar"
+        >Contrast
+        <input
+          type="range"
+          name="contrast-bar"
+          value="100"
+          min="0"
+          max="200"
+          class="bar"
+        />
+      </label>
+      <label for="saturation-bar"
+        >Saturation
+        <input
+          type="range"
+          name="saturation-bar"
+          value="100"
+          min="0"
+          max="200"
+          class="bar"
+        />
+      </label>
+      <label for="hue-bar"
+        >Hue
+        <input
+          type="range"
+          name="hue-bar"
+          value="0"
+          min="0"
+          max="360"
+          class="bar"
+        />
+      </label>
+      <label for="blur-bar"
+        >Blur
+        <input
+          type="range"
+          name="blur-bar"
+          value="0"
+          min="0"
+          max="10"
+          class="bar"
+        />
+      </label>
+    </div>
+    <img src="./image.png" alt="Alternative text." class="example-image" />
+    <section class="example-section">
+      Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum
+      sint consectetur cupidatat.
+    </section>
+    <script src="index.js"></script>
+  </body>
+</html>
