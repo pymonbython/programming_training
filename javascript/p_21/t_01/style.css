@@ -1,0 +1,13 @@
+body {
+  font-family: arial, sans-serif;
+}
+form {
+  width: 60%;
+  margin: 0 auto;
+}
+input,
+select,
+button {
+  display: block;
+  margin: 20px 0;
+}

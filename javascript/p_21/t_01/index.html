@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ankieta/Sonda/Voiting</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="http://127.0.0.1:8080/style.css"
+    />
+  </head>
+  <body>
+    <form class="voiting-form">
+      <h1>System go głosowania</h1>
+      <label for=""
+        >User name:
+        <input type="text" name="" value="" required class="user-name"
+      /></label>
+      <label for=""
+        >Password:
+        <input
+          type="text"
+          name=""
+          value=""
+          required
+          class="user-id"
+          maxlength="8"
+          minlength="8"
+      /></label>
+      <select class="vote-options">
+        <option value="option-1">Zdecydowanie TAK!</option>
+        <option value="option-2">Zdecydowanie NIE!</option>
+        <option value="option-3">Wstrzymuję się.</option>
+      </select>
+      <button class="btn-submit" type="submit">Vote</button>
+    </form>
+    <div class="vote-results"></div>
+    <script src="index.js"></script>
+  </body>
+</html>

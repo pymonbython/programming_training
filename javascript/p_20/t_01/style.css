@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+}
+.note-title {
+  color: white;
+  text-transform: capitalize;
+  margin: 20px;
+}
+
+body {
+  background-color: darkBlue;
+  font-family: Arial, sans-serif;
+}
+
+.note-area {
+  display: block;
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  border: 2px solid cadetBlue;
+}
+
+.save-btn {
+  border-style: none;
+  background-color: cadetBlue;
+  color: white;
+  font-family: inherit;
+  text-transform: uppercase;
+  font-size: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 20px;
+  border: 2px solid cadetBlue;
+}
+
+.save-btn:hover {
+  color: cadetBlue;
+  background-color: white;
+}
+
+.notes {
+  color: white;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.note {
+  padding: 10px 20px;
+  margin: 20px auto;
+  border: 2px solid cadetBlue;
+  text-wrap: wrap;
+  overflow-wrap: break-word;
+}
+
+.note button {
+  margin: 5px 10px;
+  margin-right: 0;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  color: white;
+  background-color: darkRed;
+  border-style: none;
+  cursor: pointer;
+  border: 2px solid darkRed;
+  font-size: 16px;
+}
+
+.note button:hover {
+  color: darkRed;
+  background-color: white;
+}
