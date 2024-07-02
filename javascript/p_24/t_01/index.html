@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Quiz App</title>
+    <style>
+      html {
+        font-family: arial, sans-serif;
+        font-size: 30px;
+        text-align: center;
+      }
+
+      div {
+        margin: 50px auto;
+        text-align: left;
+      }
+
+      button {
+        border-style: none;
+        background-color: darkred;
+        border: 2px solid darkred;
+        color: white;
+        font-size: 40px;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: 0.2s;
+        box-shadow: 0 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
+
+      select {
+        font-size: 20px;
+      }
+
+      button:hover {
+        background-color: white;
+        color: darkred;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Sprawdź się!</h1>
+    <hr />
+    <div id="question"></div>
+    <div id="answers"></div>
+    <button onclick="quiz.nextQuestion()" type="" id="next">
+      Next question
+    </button>
+    <div id="result"></div>
+    <script src="index.js"></script>
+  </body>
+</html>
